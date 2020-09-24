@@ -28,9 +28,9 @@ public class UseBean {
        利用@Qualifier标签也可以区分同一个类型的不同实例
     */
     @Bean
-    public String useStudent1(@Qualifier("y") Student student){
+    public String useStudent1(@Qualifier("y") Student s){
         System.out.println(name);//kfc
-        System.out.println(student.getName());
+        System.out.println(s.getName());
         return "hello";
     }
 

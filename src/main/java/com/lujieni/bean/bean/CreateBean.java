@@ -1,5 +1,6 @@
 package com.lujieni.bean.bean;
 
+import com.lujieni.bean.entity.BaseDTO;
 import com.lujieni.bean.entity.Student;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -23,6 +24,27 @@ public class CreateBean {
         Student s = new Student();
         s.setName("s");
         return s;
+    }
+
+    @Bean
+    public BaseDTO<String> h1(){
+        BaseDTO<String> baseDTO = new BaseDTO<>();
+        baseDTO.setT("hello");
+        return baseDTO;
+    }
+
+    @Bean
+    public BaseDTO<Integer> h2(){
+        BaseDTO<Integer> baseDTO = new BaseDTO<>();
+        baseDTO.setT(123);
+        return baseDTO;
+    }
+
+    @Bean
+    public BaseDTO h3(){
+        BaseDTO baseDTO = new BaseDTO<>();
+        baseDTO.setT(13L);
+        return baseDTO;
     }
 
 
