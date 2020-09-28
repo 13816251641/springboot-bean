@@ -21,8 +21,7 @@ public class BeanService {
        3.
           @Autowired
           private BaseDTO<Double> baseDTO;
-          泛型和非泛型都满足条件,优先匹配泛型,其次是非泛型,这里没有Double的泛型,
-          但有非泛型所以也OK
+          泛型和非泛型都满足条件,优先匹配泛型,其次是非泛型,这里没有Double的泛型,但有非泛型会被匹配所以也OK
      */
 
     @Autowired
