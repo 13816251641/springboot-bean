@@ -33,12 +33,14 @@ public class CreateBean {
         return baseDTO;
     }
 
+    /*
     @Bean
     public BaseDTO<Integer> h2(){
         BaseDTO<Integer> baseDTO = new BaseDTO<>();
         baseDTO.setT(123);
         return baseDTO;
     }
+    */
 
     @Bean
     public BaseDTO h3(){
