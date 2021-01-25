@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 
     @Autowired
-    private BaseDTO<Double> baseDTO;
+    private BaseDTO<Double> h2;
 
     @RequestMapping("/use-base-bean")
     public void useBaseBean(){
-        System.out.println(baseDTO.getT());
+        System.out.println(h2.getT());
     }
 
 

@@ -19,7 +19,7 @@ public class UseBean {
     private String name = "mc";//麦当劳
 
     @Value("${name}")
-    private void setName(String hiv){
+    private void setAll(String hiv){
         name = hiv;// name:mc->kfc
     }
 

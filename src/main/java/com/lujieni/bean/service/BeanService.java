@@ -11,21 +11,22 @@ public class BeanService {
        1.
           @Autowired
           private BaseDTO baseDTO;
-          泛型和非泛型都满足条件,会报异常
+          先根据BaseDTO类型找合适的bean,有3个;
+          再根据baseDTO区分,但三个分别叫h1&h2&h3无法区分所以报错;
 
        2.
           @Autowired
           private BaseDTO<String> baseDTO;
-          如果泛型和非泛型都满足条件,优先匹配正确的泛型,其次是非泛型,非泛型也能匹配到
+          如果泛型和非泛型都满足条件,优先匹配正确的泛型,其次是非泛型,非泛型也能匹配到;
+          这里存在BaseDTO<String>所以会被优先匹配
 
        3.
           @Autowired
           private BaseDTO<Double> baseDTO;
-          如果泛型和非泛型都满足条件,优先匹配正确的泛型,其次是非泛型,这里没有Double的泛型,但有非泛型会被匹配所以也OK
+          这里没有Double类型的泛型,但是退而求其次有BaseDTO baseDTO的非泛型,所以匹配非泛型
      */
 
     @Autowired
-    private BaseDTO<Double> baseDTO;
-
+    private BaseDTO<Double> h2;
 
 }
