@@ -23,7 +23,9 @@ public class BeanService {
        3.
           @Autowired
           private BaseDTO<Double> baseDTO;
-          这里没有Double类型的泛型,但是退而求其次有BaseDTO baseDTO的非泛型,所以匹配非泛型
+          这里没有Double类型的泛型,但是退而求其次有BaseDTO baseDTO的非泛型,所以匹配非泛型。
+          但是我们使用这个泛型的时候要小心,因为它不是Double类型的,具体可以见HelloController
+          中的示例
      */
 
     @Autowired

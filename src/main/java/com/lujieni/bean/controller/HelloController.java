@@ -13,7 +13,8 @@ public class HelloController {
 
     @RequestMapping("/use-base-bean")
     public void useBaseBean(){
-        System.out.println(h2.getT());
+        Double t = h2.getT();
+        System.out.println(t);
     }
 
 
