@@ -26,9 +26,14 @@ public class BeanService {
           这里没有Double类型的泛型,但是退而求其次有BaseDTO baseDTO的非泛型,所以匹配非泛型。
           但是我们使用这个泛型的时候要小心,因为它不是Double类型的,具体可以见HelloController
           中的示例
+
+       4.
+          @Autowired
+          private BaseDTO baseDTO;
+          如果泛型和非泛型都满足条件,没有进一步通过字段名匹配的话就会报错,泛型和非泛型没有优先级
      */
 
     @Autowired
-    private BaseDTO<Double> h2;
+    private BaseDTO<Double> baseDTO;
 
 }
